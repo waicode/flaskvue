@@ -1,10 +1,10 @@
 {% extends "layout.html" %} {% block script %}
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
-{% endblock %} {% block body %}
+{% endblock %} {% block content %}
 <div id="app">
   <h1>[[ message ]]</h1>
-  {% include header.html %} {% include submenu.html %} {% include main.html %}
-  {% include footer.html %} {% endblock %}
+  {% include "parts/header.html" %} {% include "parts/sidemenu.html" %} {%
+  include "parts/main.html" %} {% include "parts/footer.html" %}
 </div>
 
 <script>
@@ -16,4 +16,5 @@
     },
   });
 </script>
+
 {% endblock %}
