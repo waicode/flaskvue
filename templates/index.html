@@ -1,20 +1,16 @@
-{% extends "layout.html" %} {% block script %}
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-{% endblock %} {% block content %}
-<div id="app">
-  <h1>[[ message ]]</h1>
-  {% include "parts/header.html" %} {% include "parts/sidemenu.html" %} {%
-  include "parts/main.html" %} {% include "parts/footer.html" %}
-</div>
+{% extends "layout.html" %}
 
+<!-- content  -->
+{% block content %}
+<div id="main">[[ message ]]</div>
 <script>
-  const app = new Vue({
-    el: "#app",
+  new Vue({
+    el: "#main",
     delimiters: ["[[", "]]"],
     data: {
-      message: "Hello Flask + Vue.js !!!",
+      message: "Main Vue message",
     },
   });
 </script>
-
 {% endblock %}
+<!-- /content  -->

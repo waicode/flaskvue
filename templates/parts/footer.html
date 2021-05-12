@@ -1,0 +1,29 @@
+<div id="app-footer">
+  <app-footer>
+    <div>[[ message ]]</div>
+  </app-footer>
+</div>
+
+<script>
+  Vue.component("app-footer", {
+    data: function () {
+      return {
+        message: "footer message",
+      };
+    },
+    delimiters: ["[[", "]]"],
+    template: `
+      <div id="footer">
+          <p>[[ message ]]</p>
+          <p><slot /></p>
+      </div>`,
+  });
+
+  new Vue({
+    el: "#app-footer",
+    delimiters: ["[[", "]]"],
+    data: {
+      message: "footer Vue message",
+    },
+  });
+</script>

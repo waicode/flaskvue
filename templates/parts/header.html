@@ -1,0 +1,29 @@
+<div id="app-header">
+  <app-header>
+    <div>[[ message ]]</div>
+  </app-header>
+</div>
+
+<script>
+  Vue.component("app-header", {
+    data: function () {
+      return {
+        message: "header message",
+      };
+    },
+    delimiters: ["[[", "]]"],
+    template: `
+      <div id="header">
+          <p>[[ message ]]</p>
+          <p><slot /></p>
+      </div>`,
+  });
+
+  new Vue({
+    el: "#app-header",
+    delimiters: ["[[", "]]"],
+    data: {
+      message: "header Vue message",
+    },
+  });
+</script>

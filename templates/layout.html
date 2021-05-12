@@ -2,10 +2,20 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    {% block script %} {% endblock %}
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <title>Flask + Vue.js</title>
   </head>
   <body>
+    <!-- header  -->
+    {% include "parts/header.html" %}
+    <!-- /header  -->
+
+    <!-- content  -->
     {% block content %} {% endblock %}
+    <!-- content  -->
+
+    <!-- footer  -->
+    {% include "parts/footer.html" %}
+    <!-- footer  -->
   </body>
 </html>
