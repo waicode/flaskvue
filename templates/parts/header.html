@@ -8,7 +8,7 @@
   Vue.component("app-header", {
     data: function () {
       return {
-        message: "header message",
+        message: "This is header",
       };
     },
     delimiters: ["[[", "]]"],
@@ -23,7 +23,17 @@
     el: "#app-header",
     delimiters: ["[[", "]]"],
     data: {
-      message: "header Vue message",
+      message: "message from Vue",
     },
   });
 </script>
+<style>
+  #app-header {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #efebe9;
+    top: 0;
+    margin-top: 0;
+    height: 120px;
+  }
+</style>

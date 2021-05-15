@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def show():
-    return render_template('index.html')
+    return render_template('index.html', message='Main Flask message')
 
 def __app_run():
     app_port = 5000

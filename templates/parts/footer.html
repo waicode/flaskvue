@@ -8,7 +8,7 @@
   Vue.component("app-footer", {
     data: function () {
       return {
-        message: "footer message",
+        message: "This is footer",
       };
     },
     delimiters: ["[[", "]]"],
@@ -23,7 +23,16 @@
     el: "#app-footer",
     delimiters: ["[[", "]]"],
     data: {
-      message: "footer Vue message",
+      message: "message from Vue",
     },
   });
 </script>
+
+<style>
+  #app-footer {
+    width: 100%;
+    padding: 30px 4% 10px;
+    background-color: #d7ccc8;
+    height: 240px;
+  }
+</style>

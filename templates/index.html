@@ -2,7 +2,10 @@
 
 <!-- content  -->
 {% block content %}
-<div id="main">[[ message ]]</div>
+<div id="main">
+  <p class="main-message">🥦 [[ message ]]</p>
+  <p class="main-message">🌶 {{ message }}</p>
+</div>
 <script>
   new Vue({
     el: "#main",
@@ -12,5 +15,20 @@
     },
   });
 </script>
+<style>
+  body {
+    margin: 0;
+  }
+  #main {
+    width: 100%;
+    padding: 80px;
+    background-color: #fff;
+    height: 48vh;
+  }
+  .main-message {
+    font-size: x-large;
+    font-weight: bold;
+  }
+</style>
 {% endblock %}
 <!-- /content  -->
